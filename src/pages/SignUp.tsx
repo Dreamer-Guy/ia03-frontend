@@ -31,9 +31,9 @@ export default function SignUp() {
         <div className="flex flex-col justify-center items-center h-screen">
             <div className="flex flex-col justify-center items-center ">
                 <h2 className="text-4xl font-bold mb-8">Welcome to Our Platform</h2>
+                <h1 className="text-2xl font-bold mb-6">Sign up</h1>
             </div>
             <form onSubmit={handleSubmit(onSubmit)} className="bg-white p-8 rounded shadow-md w-96">
-                <h1 className="text-2xl font-bold mb-6">Sign up</h1>
                 <input {...register('email', { required: 'Email is required' })}
                     placeholder="Email" className="w-full p-2 mb-4 border rounded" />
                 {errors.email && <p className="text-red-500">{errors.email.message}</p>}

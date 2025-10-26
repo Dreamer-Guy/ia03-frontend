@@ -36,11 +36,11 @@ export default function Login() {
     const onSubmit = (data: UserCredentials) => mutation.mutate(data);
     return (
         <div className="flex flex-col justify-center items-center h-screen mb-5">
-            <div className="flex justify-center items-center ">
+            <div className="flex flex-col justify-center items-center ">
                 <h2 className="text-4xl font-bold mb-8">Enter your credentials</h2>
+                <h1 className="text-2xl font-bold mb-6">Login</h1>
             </div>
             <form onSubmit={handleSubmit(onSubmit)} className="bg-white p-8 rounded shadow-md w-96">
-                <h1 className="text-2xl font-bold mb-6">Sign Up</h1>
                 <input {...register('email', { required: 'Email is required' })}
                     placeholder="Email" className="w-full p-2 mb-4 border rounded" />
                 {errors.email && <p className="text-red-500">{errors.email.message}</p>}
